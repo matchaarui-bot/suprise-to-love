@@ -2,140 +2,145 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>surprise to my friend ♡</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for my hearts2hearts ♡</title>
 <style>
 *{box-sizing:border-box}
-:root{--pink:#ff80ad;--dark:#a52e69;--light:#fff0f6;--purple:#d9c7ff}
-body{margin:0;background:#fff0f6;color:var(--dark);font-family:monospace;text-align:center;overflow-x:hidden}
-.page{min-height:100vh;display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px;position:relative;overflow:hidden}
-.page.active{display:flex;animation:appear .5s ease}
-@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-h1{font-size:clamp(22px,6vw,34px);margin:14px 0}
-h2{font-size:clamp(19px,5vw,25px);line-height:1.7}
-p{line-height:1.8;font-size:14px}
-button{font-family:monospace;font-weight:bold;font-size:14px;color:white;background:#ff76a5;border:2px solid #b83d75;border-radius:12px;padding:13px 20px;cursor:pointer;box-shadow:0 4px #b83d75;transition:.15s}
-button:active{transform:translateY(3px);box-shadow:0 1px #b83d75}
-button:focus-visible{outline:3px solid #a52e69;outline-offset:4px}
-.gift{font-size:clamp(100px,28vw,150px);cursor:pointer;filter:drop-shadow(0 7px 0 #efb5d0);animation:bounce 1s infinite alternate}
-@keyframes bounce{to{transform:translateY(-10px) rotate(3deg)}}
-.sparkle{position:absolute;pointer-events:none;animation:twinkle 1.4s infinite alternate}
-@keyframes twinkle{to{transform:scale(1.5) rotate(20deg);opacity:.4}}
-.cloud{position:absolute;bottom:-35px;font-size:75px;color:white;opacity:.8}
-.panel{width:min(100%,390px);background:#fffafd;border:2px dashed #ff8db7;border-radius:18px;padding:20px;box-shadow:5px 5px 0 #f7c5da}
-.cake{font-size:100px;animation:bounce 1s infinite alternate}
-.pixel{font-size:65px;image-rendering:pixelated;animation:walk .7s infinite alternate}
-@keyframes walk{to{transform:translateX(12px)}}
-.scene{width:min(100%,390px);padding:25px 8px;background:linear-gradient(#dce5ff,#fff0f6);border:2px solid #cbb4e9;border-radius:16px}
-.letter{background:#fffaf0;border:3px dashed #ff9dbd;border-radius:6px;padding:22px 15px;width:min(100%,360px);box-shadow:4px 5px #efc2d5;transform:rotate(-1deg);animation:appear .6s}
-.letter h2{color:#bc3977}
-.hidden{display:none!important}
-.confetti{position:fixed;top:-30px;z-index:99;pointer-events:none;animation:fall 3.5s linear forwards}
-@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:.8}}
-.heart{font-size:28px;animation:bounce .7s infinite alternate}
-.small{font-size:12px;opacity:.8}
-button+button{margin-top:15px}
+:root{--blue:#78aaff;--dark:#174b9d;--pale:#eaf4ff;--white:#fff}
+body{margin:0;font-family:monospace;color:var(--dark);background:#eaf4ff;text-align:center}
+.page{display:none;min-height:100vh;padding:24px 16px;position:relative;overflow:hidden;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(180deg,#c5e0ff,#f5f9ff)}
+.page.active{display:flex;animation:fade .65s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+h1{font-size:clamp(23px,6vw,34px);line-height:1.5}
+h2{font-size:clamp(19px,5vw,26px);line-height:1.8}
+p{font-size:clamp(13px,3.7vw,16px);line-height:2}
+button{font-family:monospace;font-weight:bold;font-size:14px;background:#79aaff;color:white;border:3px solid #174b9d;padding:13px 20px;box-shadow:4px 4px #174b9d;cursor:pointer;margin:12px;border-radius:4px}
+button:active{transform:translate(3px,3px);box-shadow:1px 1px #174b9d}
+.sky{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;font-size:24px;animation:twinkle 1.5s infinite alternate}
+@keyframes twinkle{to{opacity:.3;transform:scale(.7)}}
+.cloud{position:absolute;bottom:-20px;font-size:70px;color:white;opacity:.9}
+.card{position:relative;z-index:1;width:min(100%,390px);padding:22px 17px;background:#fafdff;border:3px dashed #76a8ff;box-shadow:5px 5px #b5d3ff}
+.heart{font-size:40px;animation:float 1.4s infinite alternate}
+@keyframes float{to{transform:translateY(-8px)}}
+.car-scene{position:relative;width:min(100%,420px);height:235px;border:3px solid #6199ef;background:linear-gradient(#94c5ff 0 52%,#d8eaff 52% 72%,#f6faff 72%);overflow:hidden}
+.car-scene:before{content:"☁️       ☁️        ☁️";position:absolute;top:12px;left:0;width:100%;font-size:25px}
+.city{position:absolute;bottom:75px;width:100%;font-size:35px;letter-spacing:3px}
+.road{position:absolute;bottom:0;height:68px;width:100%;background:#a7caff;border-top:4px solid #6199ef}
+.road:after{content:"— — — — — — —";position:absolute;top:27px;left:0;width:100%;color:white;letter-spacing:5px}
+.car{position:absolute;bottom:29px;left:-160px;font-size:82px;z-index:2;animation:drive 3.2s forwards steps(12)}
+@keyframes drive{0%{left:-160px}75%{left:calc(100% - 130px)}100%{left:calc(100% - 130px)}}
+.car-note{position:absolute;top:58px;right:10px;background:white;border:2px dashed #6199ef;padding:8px;font-size:12px;z-index:3}
+.envelope{font-size:85px;animation:float 1s infinite alternate}
+.letter{width:min(100%,390px);padding:25px 18px;background:#fffdf7;border:5px dashed #8bb5ff;box-shadow:5px 5px #a6c9ff;transform:rotate(-1deg)}
+.letter p{line-height:2.1}
+.pixel-bunny{font-size:54px;filter:drop-shadow(3px 3px #9dc2ff)}
+.confetti{position:fixed;top:-30px;z-index:9;pointer-events:none;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(700deg)}}
+.small{font-size:12px}
 </style>
 </head>
 <body>
 
 <section class="page active" id="p1">
-<div class="sparkle" style="top:12%;left:12%">✦</div>
-<div class="sparkle" style="top:25%;right:12%">♡</div>
-<div class="sparkle" style="bottom:22%;left:15%">✧</div>
-<p>♡ a little surprise for you ♡</p>
-<div class="gift" onclick="openGift()" role="button" tabindex="0" aria-label="Buka kado" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGift()}">🎁</div>
-<h1>you have a little surprise!</h1>
-<button onclick="openGift()">OPEN YOUR GIFT ♡</button>
-<p class="small">tap the gift to open it</p>
-<div class="cloud" style="left:-10px">☁</div>
-<div class="cloud" style="right:-10px">☁</div>
+<div class="sky">
+<span class="star" style="top:12%;left:12%">✦</span>
+<span class="star" style="top:18%;right:15%">♡</span>
+<span class="star" style="top:40%;left:6%">✧</span>
+<span class="star" style="top:55%;right:8%">♡</span>
+<span class="cloud" style="left:-10px">☁</span>
+<span class="cloud" style="right:-10px">☁</span>
+</div>
+<div class="heart">💙</div>
+<p>♡ a little letter for my favorite girls ♡</p>
+<h1>haii member hearts2hearts tersayanganku,</h1>
+<div class="card">
+<p>udah tidak kerasa ya kita sudah dari 2025 bersama..</p>
+<p>Thanks udah nemenin hidupku ❤️❤️</p>
+</div>
+<div class="pixel-bunny">🐰🎀</div>
+<button onclick="driveCar()">✉ BUKA SURAT ✉</button>
+<p class="small">a little surprise just for you ♡</p>
 </section>
 
 <section class="page" id="p2">
-<p>✧･ﾟ: *✧･ﾟ:* SURPRISE!! *:･ﾟ✧*:･ﾟ✧</p>
-<h1>YEAYYY!!</h1>
-<div style="font-size:38px">🎈 🎉 🎈</div>
-<div class="cake">🎂</div>
-<div class="panel">
-<h2>Selamat 1 tahun lebih kita bertemann, yeyy 👏👏👏</h2>
-<p>makasih udah jadi bagian dari cerita ini ♡</p>
+<p>♡ surat spesial sedang diantar ♡</p>
+<h1>special delivery!</h1>
+<div class="car-scene">
+<div class="city">🏙️ 🏢 🏙️</div>
+<div class="car-note">surat spesial<br>untuk kamu! ♡</div>
+<div class="road"></div>
+<div class="car">🚙💌</div>
 </div>
-<p>semoga persahabatan kita awet terus!</p>
-<button onclick="showPage('p3');confetti()">NEXT ♡</button>
+<p>tunggu yaa, mobilnya lagi mengantar surat...</p>
 </section>
 
 <section class="page" id="p3">
-<p>✧ a little messenger is coming ✧</p>
-<div class="scene">
-<div style="font-size:30px">☁️ ☁️ ☁️</div>
-<div class="pixel">🚶🏻‍♀️💌</div>
-<p>karakter kecil datang membawa surat...</p>
-<div style="font-size:25px">🌷 🌼 🌷 🌼</div>
-</div>
-<p>ehh, dia bawa surat buat kalian!</p>
-<button onclick="revealLetter()">BUKA SURATNYA ♡</button>
+<div class="heart">💌</div>
+<h1>suratnya sudah sampai!</h1>
+<div class="envelope">✉️</div>
+<div class="pixel-bunny">🐰🎀</div>
+<p>paket spesial dari carmen unnie!</p>
+<button onclick="openLetter()">BUKA SURATNYA ♡</button>
 </section>
 
 <section class="page" id="p4">
 <div class="letter">
-<div style="font-size:34px">💌</div>
-<p>♡ a special letter ♡</p>
-<p>untuk, Adiba, Alya, Rara, Ina, and Halimah...</p>
-<div style="font-size:28px">👑</div>
-<h2>to: princess adek kesayangann</h2>
-<p>makasih udah nemenin perjalanan persahabatan ini.</p>
-<p>semoga kita bisa berteman lebih lama lagi ♡</p>
-<p>love u, princess!!</p>
-<div class="heart">♡</div>
+<div style="font-size:36px">🎀 💌 🎀</div>
+<p>♡ a special message ♡</p>
+<h2>Haloo yeon adekk,</h2>
+<p>ini carmen unnie, apa kabarnya setelah menerima surat inii???</p>
+<div class="heart">💙</div>
+<p>with love, carmen unnie ♡</p>
 </div>
-<button onclick="showPage('p5');confetti()">NEXT, PRINCESS! ♡</button>
+<button onclick="showPage('p5');confetti()">NEXT ♡</button>
 </section>
 
 <section class="page" id="p5">
-<div style="font-size:48px">🎉 🎀 🎉</div>
-<h1>thank you, princess!</h1>
-<div style="font-size:70px">🐱</div>
-<div class="panel">
-<p>makasih udah jadi bagian dari hidupku ♡</p>
-<p>1 tahun lebih bareng, semoga masih banyak cerita yang bakal kita buat!</p>
-<p>jangan bosen sama gue yaa :p</p>
+<div class="heart">💙</div>
+<h1>thank you, hearts2hearts!</h1>
+<div style="font-size:55px">🐰 💌 🐰</div>
+<div class="card">
+<p>Thanks udah nemenin hidupku ❤️❤️</p>
+<p>semoga kita bisa terus membuat kenangan indah bersama ♡</p>
+<p>with love, carmen unnie.</p>
 </div>
-<div style="font-size:35px;margin:20px">💗 ✨ 💗</div>
-<button onclick="restart()">ULANGI DARI AWAL ↻</button>
+<button onclick="restart()">↻ ULANGI DARI AWAL</button>
 </section>
 
 <script>
+let timer;
 function showPage(id){
- document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
- document.getElementById(id).classList.add('active');
- window.scrollTo(0,0);
+clearTimeout(timer);
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
 }
 function confetti(){
- const symbols=['💗','✨','🎉','🌸','⭐','💕','🎀'];
- for(let i=0;i<65;i++){
-  const el=document.createElement('span');
-  el.className='confetti';
-  el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
-  el.style.left=Math.random()*100+'vw';
-  el.style.fontSize=(14+Math.random()*18)+'px';
-  el.style.animationDelay=Math.random()*1.8+'s';
-  document.body.appendChild(el);
-  setTimeout(()=>el.remove(),5500);
- }
+const icons=['💙','✨','⭐','💌','🩵','🎀'];
+for(let i=0;i<45;i++){
+const e=document.createElement('span');
+e.className='confetti';
+e.textContent=icons[Math.floor(Math.random()*icons.length)];
+e.style.left=Math.random()*100+'vw';
+e.style.animationDelay=Math.random()*1.5+'s';
+e.style.fontSize=(15+Math.random()*17)+'px';
+document.body.appendChild(e);
+setTimeout(()=>e.remove(),5000);
 }
-function openGift(){
- showPage('p2');
- confetti();
 }
-function revealLetter(){
- showPage('p4');
- confetti();
+function driveCar(){
+showPage('p2');
+timer=setTimeout(()=>{showPage('p3');confetti()},3600);
+}
+function openLetter(){
+showPage('p4');
+confetti();
 }
 function restart(){
- document.querySelectorAll('.confetti').forEach(el=>el.remove());
- showPage('p1');
+document.querySelectorAll('.confetti').forEach(e=>e.remove());
+showPage('p1');
 }
 </script>
 </body>
-  </html>
+ </html>
